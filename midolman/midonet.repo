@@ -1,0 +1,5 @@
+[goodrain-midonet]
+name=Midonet 2015.06 for CentOS 7
+baseurl=https://repo.goodrain.com/midonet/
+enabled=1
+gpgcheck=0
