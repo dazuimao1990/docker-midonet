@@ -1,5 +1,7 @@
 #midonet-api
+
 容器化的 midonet-api 项目
+
 构建命令：
 `docker build -t midonet-api .`
 可用的参数：
@@ -8,4 +10,4 @@
 -e DEBUG=1                                            #开启debug模式
 
 启动命令：
-`docker run -dti --name=midonet-api --net=host -e ZK_ENDPOINTS="192.178.0.2:2181,182.122.156.23:2181" -e PAUSE=100000 midonet-api`
+`docker run -dti --name=midonet-api --net=host -e ZK_ENDPOINTS="192.178.0.2:2181,182.122.156.23:2181" midonet-api`
