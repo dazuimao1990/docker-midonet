@@ -4,7 +4,7 @@
 
 - 构建命令：
 
-`docker build -t rainbond/midonet-api:v2016.05 .`
+`docker build -t rainbond/midonet-api:v2015.06 .`
 
 - 可用的参数：
 
@@ -16,4 +16,4 @@
 
 - 启动命令：
 
-`docker run -dti --name=midonet-api --net=host -e ZK_ENDPOINTS="192.178.0.2:2181,182.122.156.23:2181" rainbond/midonet-api:v2016.05`
+`docker run -dti --name=midonet-api --net=host -e ZK_ENDPOINTS="192.178.0.2:2181,182.122.156.23:2181" rainbond/midonet-api:v2015.06`
