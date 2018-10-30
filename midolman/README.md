@@ -22,4 +22,4 @@
 
 - 启动命令：
 
-`docker run --rm -dti --name=midoman --net=host -e ZK_ENDPOINTS="1.1.1.1:2181,2.2.2.2:2181,3.3.3.3:2181" -e CASSANDRA_SEEDS="1.1.1.1,2.2.2.2,3.3.3.3" -e CASSANDRA_REP=3 rainbond/midolman:v2015.06`
+`docker run --rm -dti --name=midoman -v /lib/modules:/lib/modules --net=host -e ZK_ENDPOINTS="1.1.1.1:2181,2.2.2.2:2181,3.3.3.3:2181" -e CASSANDRA_SEEDS="1.1.1.1,2.2.2.2,3.3.3.3" -e CASSANDRA_REP=3 rainbond/midolman:v2015.06`
