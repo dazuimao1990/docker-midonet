@@ -11,12 +11,20 @@ session_timeout = 30000
 session_gracetime = 30000
 [cassandra]
 servers = ${CASSANDRA_SEEDS:-"127.0.0.1"}
-replication_factor = 3
+replication_factor = ${CASSANDRA_REP:-1}
 cluster = midonet
 bgpd_binary = /usr/lib/quagga/
 EOF
-
+#Define midonet_host_id.properties
+if [[ ${MIDO_ID} ]];then 
+  echo "host_uuid=${MIDO_ID}" > /etc/midonet_host_id.properties
+else
+  echo 'midonet_host_id undefined! please export $MIDO_ID'
+  exit 1
+fi
+#add PAUSE mode 
 [ $PAUSE ] && sleep $PAUSE
+#config
 cat << EOF | mn-conf set -t default
 zookeeper {
     zookeeper_hosts = "${ZK_ENDPOINTS:-'127.0.0.1:2181'}"
