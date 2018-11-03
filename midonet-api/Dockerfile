@@ -11,7 +11,7 @@ COPY docker-entrypoint.sh /
 ENV TZ=Asia/Shanghai
 
 RUN yum makecache fast \
-&& yum install -y tomcat midonet-api python-midonetclient \
+&& yum install -y net-tools tomcat midonet-api python-midonetclient \
 && yum clean all \
 && chmod +x /docker-entrypoint.sh
 
